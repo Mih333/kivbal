@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+{% load staticfiles i18n cms_tags sekizai_tags menu_tags %}
+{% load cms_tags %}
+
+{% block breadcrumb %}{% endblock %}
+
+{% block content %}
+<!--========== PROMO BLOCK ==========-->
+  <div id="hero_1" class="g-fullheight--md js__parallax-window" style="background:url({% static 'img/fabric.png' %})fixed,url({% static 'img/1920x1080/14.jpg' %}) center no-repeat fixed;">
+    <div class="g-container--md g-text-center--xs g-ver-center--md g-padding-y-150--xs g-padding-y-0--md">
+      <div class="g-margin-b-60--xs">
+        {% placeholder header_text %}
+      </div>
+    </div>
+    <a href="#js__scroll-to-section" class="s-scroll-to-section-v1--bc g-margin-b-15--xs">
+      <i class="g-font-size-18--xs g-color--white ti-angle-double-down"></i>
+      {% static_placeholder 'arrow' %}
+    </a>
+  </div>
+  <!--========== END PROMO BLOCK ==========-->
+
+<!-- about -->
+  <div id="js__scroll-to-section" class="g-promo-section">
+    <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+      <div class="row">
+        <div class="col-md-4 g-margin-t-15--xs g-margin-b-60--xs g-margin-b-0--lg">
+          {% static_placeholder 'about_company' with Textarea%}
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+        	<p class="g-font-size-18--xs text-right">{% placeholder "about_text" with Textarea %}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3 g-promo-section__img-right--lg g-bg-position--center g-height-100-percent--md js__fullwidth-img">
+    {% placeholder "about_image" as image_src %}
+      <img src="{{ img_src }}" alt="">
+    </div>
+  </div>
+  <!-- end about -->
+  <!-- whay us -->
+
+  <div class="g-bg-color--primary-ltb">
+    <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+      <div class="g-text-center--xs g-margin-b-100--xs">
+        {% placeholder know_why %}
+      </div>
+      <ul class="list-inline row g-margin-b-100--xs">
+        <!-- Process -->
+        <li class="col-sm-3 col-xs-6 g-full-width--xs s-process-v1 g-margin-b-60--xs g-margin-b-0--md">
+          <div class="center-block g-text-center--xs">
+            <div class="g-margin-b-30--xs">
+              <span class="g-display-inline-block--xs g-width-100--xs g-height-100--xs g-font-size-38--xs g-color--primary g-bg-color--white g-box-shadow__dark-lightest-v4 g-padding-x-20--xs g-padding-y-20--xs g-radius--circle">01</span>
+            </div>
+            <div class="g-padding-x-20--xs">
+              {% placeholder pro_dancer %}
+            </div>
+          </div>
+        </li>
+        <!-- End Process -->
+        <!-- Process -->
+        <li class="col-sm-3 col-xs-6 g-full-width--xs s-process-v1 g-margin-b-60--xs g-margin-b-0--md">
+          <div class="center-block g-text-center--xs">
+            <div class="g-margin-b-30--xs">
+              <span class="g-display-inline-block--xs g-width-100--xs g-height-100--xs g-font-size-38--xs g-color--primary g-bg-color--white g-box-shadow__dark-lightest-v4 g-padding-x-20--xs g-padding-y-20--xs g-radius--circle">02</span>
+            </div>
+            <div class="g-padding-x-20--xs">
+              {% placeholder stars_dancer %}
+            </div>
+          </div>
+        </li>
+        <!-- End Process -->
+        <!-- Process -->
+        <li class="col-sm-3 col-xs-6 g-full-width--xs s-process-v1 g-margin-b-60--xs g-margin-b-0--sm">
+          <div class="center-block g-text-center--xs">
+            <div class="g-margin-b-30--xs">
+              <span class="g-display-inline-block--xs g-width-100--xs g-height-100--xs g-font-size-38--xs g-color--primary g-bg-color--white g-box-shadow__dark-lightest-v4 g-padding-x-20--xs g-padding-y-20--xs g-radius--circle">03</span>
+            </div>
+            <div class="g-padding-x-20--xs">
+              {% placeholder repertory %}
+            </div>
+          </div>
+        </li>
+        <!-- End Process -->
+        <!-- Process -->
+        <li class="col-sm-3 col-xs-6 g-full-width--xs s-process-v1">
+          <div class="center-block g-text-center--xs">
+            <div class="g-margin-b-30--xs">
+              <span class="g-display-inline-block--xs g-width-100--xs g-height-100--xs g-font-size-38--xs g-color--primary g-bg-color--white g-box-shadow__dark-lightest-v4 g-padding-x-20--xs g-padding-y-20--xs g-radius--circle">04</span>
+            </div>
+            <div class="g-padding-x-20--xs">
+              {% placeholder cooperation %}
+            </div>
+          </div>
+        </li>
+        <!-- End Process -->
+      </ul>
+      <div class="g-text-center--xs">
+        <a href="/contacts/" class="text-uppercase s-btn s-btn--md s-btn--white-brd g-radius--50 g-padding-x-70--xs">{% placeholder "interested" with Textarea %}</a>
+      </div>
+    </div>
+  </div>
+  <!-- whay us end -->
+  <!-- About -->
+  <div class="container g-padding-y-80--xs g-padding-y-25--sm">
+    <div class="row g-hor-centered-row--md g-row-col--5 g-margin-b-60--xs g-margin-b-100--md">
+      <div class="col-sm-3 col-xs-6 g-hor-centered-row__col">
+        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
+          <img class="img-responsive" src="{{ STATIC_URL }}img/400x500/1.jpg" alt="Image">
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 g-hor-centered-row__col g-margin-b-60--xs g-margin-b-0--md">
+        <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
+          <img class="img-responsive" src="{% static 'img/400x550/1.jpg' %}" alt="Image">
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5 g-hor-centered-row__col">
+      {% placeholder content_company %}
+      </div>
+    </div>
+    <div class="row g-hor-centered-row--md g-row-col--5">
+      <div class="col-sm-3 col-xs-6 col-sm-push-6 g-hor-centered-row__col">
+        <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".2s">
+          <img class="img-responsive" src="{% static 'img/400x550/2.jpg' %}" alt="Image">
+        </div>
+      </div>
+      <div class="col-sm-3 col-xs-6 col-sm-push-6 g-hor-centered-row__col g-margin-b-60--xs g-margin-b-0--md">
+        <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".1s">
+          <img class="img-responsive" src="{% static 'img/400x500/2.jpg' %}" alt="Image">
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-5 col-sm-pull-7 g-hor-centered-row__col g-text-left--xs g-text-right--md">
+        {% placeholder content_troupe %}
+      </div>
+    </div>
+    <div class="container g-padding-y-125--sm">
+      <div class="row g-hor-centered-row--md g-row-col--5 g-margin-b-60--xs g-margin-b-100--md">
+        <div class="col-sm-3 col-xs-6 g-hor-centered-row__col">
+          <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
+            <img class="img-responsive" src="{% static 'img/400x500/3.jpg' %}" alt="Image">
+          </div>
+        </div>
+        <div class="col-sm-3 col-xs-6 g-hor-centered-row__col g-margin-b-60--xs g-margin-b-0--md">
+          <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
+            <img class="img-responsive" src="{% static 'img/400x550/3.jpg' %}" alt="Image">
+          </div>
+        </div>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5 g-hor-centered-row__col">
+          {% placeholder content_cooperation %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End About -->
+  <!-- Counter -->
+  <div class="js__parallax-window hidden-area s-promo-block-v6" style="background: url({% static "img/1920x1080/06.jpg" %}) 50% 0 no-repeat fixed;">
+    <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+      <div class="row">
+        <div class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--lg">
+          <div class="g-text-center--xs">
+            <div class="g-margin-b-10--xs">
+              <figure class="g-display-inline-block--xs g-font-size-70--xs g-color--white js__counter">1</figure>
+              <span class="g-font-size-40--xs g-color--white">thousand</span>
+            </div>
+            <div class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"></div>
+            <h4 class="g-font-size-28--xs g-color--white">practice</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--lg">
+          <div class="g-text-center--xs">
+            <figure class="g-display-block--xs g-font-size-70--xs g-color--white g-margin-b-10--xs js__counter">520</figure>
+            <div class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"></div>
+            <h4 class="g-font-size-28--xs g-color--white">Shows</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6 g-full-width--xs g-margin-b-70--xs g-margin-b-0--sm">
+          <div class="g-text-center--xs">
+            <figure class="g-display-block--xs g-font-size-70--xs g-color--white g-margin-b-10--xs js__counter">130</figure>
+            <div class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"></div>
+            <h4 class="g-font-size-28--xs g-color--white">Gala-concerts</h4>
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6 g-full-width--xs">
+          <div class="g-text-center--xs">
+            <div class="g-margin-b-10--xs">
+              <figure class="g-display-inline-block--xs g-font-size-70--xs g-color--white js__counter">5370</figure>
+              <span class="g-font-size-40--xs g-color--white"></span>
+            </div>
+            <div class="center-block g-hor-divider__solid--white g-width-40--xs g-margin-b-25--xs"></div>
+            <h4 class="g-font-size-28--xs g-color--white">Fans</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Counter -->
+<!-- News -->
+  <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+    <div class="g-text-center--xs g-margin-b-80--xs">
+      <p class="wow fadeInDown text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs" data-wow-delay=".6s" data-wow-duration=".5">Information</p>
+      <h2 class="wow fadeInDown g-font-size-32--xs g-font-size-36--md" data-wow-delay=".3s" data-wow-duration=".5">Last news</h2>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
+        <!-- News -->
+        <article class="rep wow fadeInLeft" data-wow-delay=".5s" data-wow-duration=".5">
+          <img class="img-responsive" src="{% static 'img/970x970/06.jpg' %}" alt="Image">
+          <div class="g-bg-color--white g-box-shadow__dark-lightest-v2 g-text-center--xs g-padding-x-40--xs g-padding-y-40--xs">
+            <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2">News</p>
+            <h3 class="g-font-size-22--xs g-letter-spacing--1"><a rel="modal:open" href="{{ STATIC_URL }}projects/past.html">Achievements</a></h3>
+            <p>Last projects</p>
+          </div>
+        </article>
+        <!-- End News -->
+      </div>
+      <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
+        <!-- News -->
+        <article class="rep wow fadeInUp" data-wow-delay=".6s" data-wow-duration=".5">
+          <img class="img-responsive" src="../../static/img/970x970/07.jpg" alt="Image">
+          <div class="g-bg-color--white g-box-shadow__dark-lightest-v2 g-text-center--xs g-padding-x-40--xs g-padding-y-40--xs">
+            <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2">News</p>
+            <h3 class="g-font-size-22--xs g-letter-spacing--1"><a rel="modal:open" href="{{ STATIC_URL }}projects/now.html">Busy now</a></h3>
+            <p>Create Something Great</p>
+          </div>
+        </article>
+        <!-- End News -->
+      </div>
+      <div class="col-sm-4">
+        <!-- News -->
+        <article class="rep wow fadeInRight" data-wow-delay=".7s" data-wow-duration=".5">
+          <img class="img-responsive" src="../../static/img/970x970/08.jpg" alt="Image">
+          <div class="g-bg-color--white g-box-shadow__dark-lightest-v2 g-text-center--xs g-padding-x-40--xs g-padding-y-40--xs">
+            <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2">News</p>
+            <h3 class="g-font-size-22--xs g-letter-spacing--1"><a rel="modal:open" href="/">Future projects</a></h3>
+            <p>Know our plans for the future</p>
+          </div>
+        </article>
+        <!-- End News -->
+      </div>
+    </div>
+  </div>
+  <!-- End News -->
+  <!-- Subscribe -->
+  <div class="g-bg-color--primary-ltb">
+    <div class="g-container--sm g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
+      <div class="g-margin-b-80--xs">
+        <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--white-opacity g-letter-spacing--2 g-margin-b-25--xs">Subscribe</p>
+        <h2 class="g-font-size-32--xs g-font-size-36--md g-color--white">Join Over 300+ People</h2>
+      </div>
+      <div class="row">
+        <div id="contact" class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+        <div id="message" class="g-color--white-opacity"></div>
+          {% placeholder 'form' %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Subscribe -->
+  <!--========== END PAGE CONTENT ==========-->
+  
+
+{% endblock %}

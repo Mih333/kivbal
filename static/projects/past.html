@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% load cms_tags %}
+
+{% render_model_add_block my_model_instance %}
+
+
+		<a href="#" class="cls-modal text-right fadeIn animSpeed08 animDelay06 animated" rel="modal:close">CLOSE</a>
+		<div class="header-window animSpeedLazy animDelay01 fadeIn animated" style="background-image: url({% static "img/carmen/main.jpg" %});background-position: top center;">
+		  <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
+		      <h2 class="text-left g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white animSpeedLazy animDelay06 fadeInUp animated">Carmen</h2>
+		  </div>
+		</div>
+		  <div class="rep_info row">
+		    <div class="col-md-6 col-xs-12 g-margin-t-0--xs g-margin-b-60--xs g-margin-b-0--lg">
+		      <div class="g-margin-b-40--xs">
+		        <p class="text-uppercase g-font-size-18--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs animSpeedLazy animDelay1 fadeInUp animated">project</p>
+		        <h2 class="g-font-size-32--xs g-font-size-36--sm g-margin-b-30--xs animSpeedLazy animDelay15 fadeInUp animated">Carmen</h2>
+		        <p class="g-font-size-15--xs text-left animSpeedSlow animDelay15 fadeIn animated">Our company KievBallet at 11 Jun 2016 года held a grandiose event in National Opera Theater from Ukraine. </p>
+		        <p class="g-font-size-15--xs text-left animSpeedSlow animDelay15 fadeIn animated">The whole beau monde of Kiev gathered on this day at the Opera House and saw the spectacle "Carmen" with participation of favorites Ukrainian public Ekaterina Kukhar and Alexander Stoyanov with soloist from shocking group Artur Gaspar.</p>
+		      </div>
+		    	<ul class="bxslider text-center">
+        		<li><img src="{% static "img/carmen/show_01.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_02.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_03.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_04.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_05.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_06.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_07.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_08.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_09.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_10.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_11.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_12.jpg" %}" alt="carmen suita by KievBallet" /></li>
+        		<li><img src="{% static "img/carmen/show_13.jpg" %}" alt="carmen suita by KievBallet" /></li>
+      		</ul>
+		  	</div>
+		<div class="col-md-6 col-xs-12 photos">
+	    <div class="col-lg-6 col-md-6 col-xs-6">
+	      <div class="box"><img class="img-responsive animSpeedLazy animDelay2 fadeInRight animated" src="../../img/carmen/02.jpg" alt="Image"></div>
+	      <div class="box"><img class="img-responsive animSpeedLazy animDelay22 fadeInRight animated" src="../img/carmen/04.jpg" alt="Image"></div>
+	    </div>
+	    <div class="col-lg-6 col-md-6 col-xs-6">
+	      <div class="box"><img class="img-responsive animSpeedLazy animDelay25 fadeInRight animated" src="../img/carmen/03.jpg" alt="Image"></div>
+	      <div class="box"><img class="img-responsive animSpeedLazy animDelay27 fadeInRight animated" src="../img/carmen/01.jpg" alt="Image"></div>
+	    </div>
+		</div>
+	</div>
+	{% endrender_model_add_block %}
+<script>
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider({
+	    controls: false,
+	    pager: false,
+	    mode: 'fade',
+	    auto: true
+	  });
+	});
+</script>

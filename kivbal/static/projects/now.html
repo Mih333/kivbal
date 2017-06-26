@@ -1,0 +1,54 @@
+{% load staticfiles cms_tags sekizai_tags %}
+
+
+		<a href="#" class="cls-modal text-right fadeIn animSpeed08 animDelay06 animated" rel="modal:close">CLOSE</a>
+		<div class="header-window animSpeedLazy animDelay01 fadeIn animated" style="background-image: url({{ STATIC_URL }}img/corsaire/gal-01.jpg);background-position: top center;">
+		  <div class="container g-text-center--xs g-padding-y-80--xs g-padding-y-125--sm">
+		      <h2 class="text-center g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white animSpeedLazy animDelay06 fadeInUp animated">#SPRING_CORSAIRE</h2>
+		  </div>
+		</div>
+		  <div class="rep_info row">
+		    <div class="col-md-6 col-xs-12 g-margin-t-0--xs g-margin-b-60--xs g-margin-b-0--lg">
+		      <div class="g-margin-b-40--xs">
+		        <p class="text-uppercase g-font-size-18--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs animSpeedLazy animDelay1 fadeInUp animated">project</p>
+		        <h2 class="g-font-size-32--xs g-font-size-36--sm g-margin-b-30--xs animSpeedLazy animDelay15 fadeInUp animated">Corsaire</h2>
+		        <p class="g-font-size-15--xs text-left animSpeedSlow animDelay15 fadeIn animated"><a class="g-color--red" href="../eng/projects.html">#SPRING_CORSAIRE</a> for the first time in Ukraine!</p>
+		        <p class="g-font-size-15--xs text-left animSpeedSlow animDelay15 fadeIn animated">The most anticipated event in world of ballet <br>on stage of National Opera and Ballet from Ukraine – ballet «Corsaire» in performance of an international trio: the most brilliant virtuoso from the US, Joseph Gatti, together with the most beautiful ballet pair of Europe, Chaterine Kuhar and Aleksander Stoyanov.</p>
+		        <strong><a href="../projects.html" class="g-color--dark text-left animSpeedSlow animDelay15 fadeIn animated">ПОДРОБНЕЕ</a></strong>
+		      </div>
+		    	<ul class="bxslider text-center">
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-01.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-02.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-03.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-04.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-05.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-06.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-07.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-08.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-09.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-10.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-11.jpg" alt="#spring_corsaire by KievBallet" /></li>
+        		<li><img src="{{ STATIC_URL }}img/corsaire/gal-12.jpg" alt="#spring_corsaire by KievBallet" /></li>
+      		</ul>
+		  	</div>
+		<div class="col-md-6 col-xs-12 photos">
+	    <div class="col-lg-6 col-md-6 col-xs-6">
+	      <div class="box"><img class="img-responsive animSpeedLazy animDelay2 fadeInRight animated" src="../img/corsaire/02.jpg" alt="Image"></div>
+	      <div class="box"><img class="img-responsive animSpeedLazy animDelay22 fadeInRight animated" src="../img/corsaire/04-2.jpg" alt="Image"></div>
+	    </div>
+	    <div class="col-lg-6 col-md-6 col-xs-6">
+	      <div class="box"><img class="img-responsive animSpeedLazy animDelay25 fadeInRight animated" src="../img/corsaire/03.jpg" alt="Image"></div>
+	      <div class="box"><img class="img-responsive animSpeedLazy animDelay27 fadeInRight animated" src="../img/corsaire/01.jpg" alt="Image"></div>
+	    </div>
+		</div>
+	</div>
+<script>
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider({
+	    controls: false,
+	    pager: false,
+	    mode: 'fade',
+	    auto: true
+	  });
+	});
+</script>
