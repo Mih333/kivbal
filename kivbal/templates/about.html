@@ -1,8 +1,5 @@
 {% extends "base.html" %}
-{% load staticfiles i18n cms_tags sekizai_tags menu_tags %}
-{% load cms_tags %}
-
-{% block breadcrumb %}{% endblock %}
+{% load cms_tags staticfiles %}
 
 {% block content %}
 <!--========== PROMO BLOCK ==========-->
@@ -18,7 +15,7 @@
     </a>
   </div>
   <!--========== END PROMO BLOCK ==========-->
-
+      
 <!-- about -->
   <div id="js__scroll-to-section" class="g-promo-section">
     <div class="container g-padding-y-80--xs g-padding-y-125--sm">
@@ -32,8 +29,7 @@
       </div>
     </div>
     <div class="col-sm-3 g-promo-section__img-right--lg g-bg-position--center g-height-100-percent--md js__fullwidth-img">
-    {% placeholder "about_image" as image_src %}
-      <img src="{{ img_src }}" alt="">
+    {% placeholder 'image-full-about' %}
     </div>
   </div>
   <!-- end about -->

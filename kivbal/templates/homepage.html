@@ -1,8 +1,5 @@
 {% extends "base.html" %}
-{% load cms_tags %}
-
-{% block breadcrumb %}{% endblock %}
-
+{% load cms_tags menu_tags staticfiles%}
 
 {% block content %}
     
@@ -12,18 +9,18 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="../../static/img/corsaire_main.jpg" alt="KievBallet #spring_corsaire ballet">
+        {% placeholder 'image-full-1' %}
         <div class="carousel-caption">
-          <h3 class="wow fadeIn g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white" data-wow-delay=".3s" data-wow-duration="1s">{% placeholder carousel_1 %}</h3>
+         {% placeholder 'carousel_1' %}
           <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=LfevIAgnvgw" title="Intro Video">
             <i class="s-icon s-icon--lg s-icon--white-brd g-radius--circle ti-control-play"></i>
           </a>
         </div>
       </div>
       <div class="item">
-        <img src="../../static/img/1920x1080/01.jpg" alt="KievBallet carmen suita ballet">
+        {% placeholder 'image-full-2' %}
         <div class="carousel-caption">
-          <h3 class="wow fadeIn g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--white" data-wow-delay=".3s" data-wow-duration="1s">{% placeholder carousel_2 %}</h3>
+          {% placeholder 'carousel_2' %}
           <a class="js__popup__youtube" href="https://www.youtube.com/watch?v=xSZwpZbrIZQ" title="Intro Video">
             <i class="s-icon s-icon--lg s-icon--white-brd g-radius--circle ti-control-play"></i>
           </a>
@@ -36,5 +33,6 @@
     </a>
   </div>
   <!--========== END HERO ==========-->
+
 
 {% endblock %}

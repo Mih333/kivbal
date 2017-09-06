@@ -1,43 +1,39 @@
 {% load cms_tags sekizai_tags i18n staticfiles static menu_tags cache %}
-
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
-  <head>
+
+<head>
   {% block meta_tags %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="{% page_attribute "meta_description" %}" />
-  <meta name="keywords" content="{% page_attribute "meta_keywords" %}" />
+  <meta name="description" content="{% page_attribute " meta_description " %}" />
+  <meta name="keywords" content="{% page_attribute " meta_keywords " %}" />
   <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
   {% endblock meta_tags %}
+  <title>{% block title %}{% page_attribute page_title %}{% if site_settings.site.name %} - {{ site_settings.site.name }}{% endif %}{% endblock title %}</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/animate.css'%}" rel="stylesheet">
+  <link href="{% static 'css/jquery.modal.css' %}" rel="stylesheet">
+  <link href="{% static 'css/jquery.bxslider.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/themify/themify.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/scrollbar/scrollbar.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/cubeportfolio/css/cubeportfolio.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/global/global.css' %}" rel="stylesheet">
+  <link href="{% static 'img/favicon.png' %}" rel="shortcut icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon"> {% render_block "css" %}
+</head>
 
-    <title>{% block title %}{% page_attribute page_title %}{% if site_settings.site.name %} - {{ site_settings.site.name }}{% endif %}{% endblock title %}</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i|Montserrat:400,700" rel="stylesheet">
-
-        <!-- Custom styles for this template -->
-        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/animate.css'%}" rel="stylesheet">
-        <link href="{% static 'css/jquery.modal.css' %}" rel="stylesheet">
-        <link href="{% static 'css/jquery.bxslider.css' %}" rel="stylesheet">
-        <link href="{% static 'vendor/themify/themify.css' %}" rel="stylesheet">
-        <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
-        <link href="{% static 'vendor/scrollbar/scrollbar.min.css' %}" rel="stylesheet">
-        <link href="{% static 'vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
-        <link href="{% static 'vendor/swiper/swiper.min.css' %}" rel="stylesheet">
-        <link href="{% static 'vendor/cubeportfolio/css/cubeportfolio.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/style.css' %}" rel="stylesheet">
-        <link href="{% static 'css/global/global.css' %}" rel="stylesheet">
-        <link href="{% static 'img/favicon.png' %}" rel="shortcut icon">
-        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-    {% render_block "css" %}
-  </head>
-
-  <body>
-    {% cms_toolbar %}
-    <!--========== HEADER ==========-->
+<body>
+  {% cms_toolbar %}
+  <!--========== HEADER ==========-->
   <header class="navbar-fixed-top s-header js__header-sticky js__header-overlay">
     <!-- Navbar -->
     <div class="s-header__navbar">
@@ -112,58 +108,61 @@
     <!-- End Overlay -->
   </header>
   <!--========== END HEADER ==========-->
-
-
-
-
-   
-<!--      <div class="container">
-
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Project name</a>
+  {% block container %} 
+    {% block content %}
+    {% endblock %} 
+  {% endblock %}
+  <!-- /container -->
+  <!--========== FOOTER ==========-->
+  <footer class="g-bg-color--dark">
+    <!-- Links -->
+    {% block footer %}
+    <div class="g-hor-divider__dashed--white-opacity-lightest">
+      <div class="container g-padding-y-80--xs">
+        <div class="row">
+          <div class="col-sm-3 col-xs-6 g-margin-b-20--xs g-margin-b-0--md">
+            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+              {% show_menu 0 1 100 100 "includes/menu/footer_menu.html" %}
+            </ul>
           </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                {% show_menu 0 1 100 100 "includes/menu/navigation.html" %}
+          <div class="col-sm-3 col-xs-6 g-margin-b-20--xs g-margin-b-0--md">
+            <ul class="list-unstyled g-ul-li-tb-5--xs g-margin-b-0--xs">
+              <li><a class="g-font-size-15--xs g-color--white-opacity" href="#">Twitter</a></li>
+              <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.facebook.com/ukrainian.ballet/?fref=ts">Facebook</a></li>
+              <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.instagram.com/stoianov_aleksandr/">Instagram</a></li>
+              <li><a class="g-font-size-15--xs g-color--white-opacity" href="https://www.youtube.com/channel/UCyV89lw15CLIaV2MF_5aSfg">YouTube</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                {% language_chooser "includes/menu/language_chooser.html" %}
-            </ul>
+          </div>
+          <div class="col-md-4 col-md-offset-2 col-sm-4 col-xs-12 col-sm-offset-1 g-padding-y-50--xs g-padding-y-0--md">
+            <h3 class="g-font-size-18--xs g-color--white">KievBallet</h3>
+            {% placeholder 'footer_text' %}
           </div>
         </div>
       </div>
-
-      {% block breadcrumb %}
-          <ol class="breadcrumb">
-            {% show_breadcrumb 0 "includes/menu/breadcrumb.html" %}
-          </ol>
-      {% endblock breadcrumb %} -->
-
-      
-          {% block container %}
-              {% block content %}{% endblock %}
-          {% endblock %}
-
-      <hr>
-      <footer>
-          {% block footer %}<p>© Company 2014</p>{% endblock %}
-      </footer>
-
-    </div> <!-- /container -->
-
-    <!-- Bootstrap core JavaScript
+    </div>
+    <!-- End Links -->
+    <!-- Copyright -->
+    <div class="container g-padding-y-50--xs">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12 g-text-center--xs g-text-left--sm">
+          <a href="/">
+            <img class="g-width-100--xs g-height-auto--xs" src="{% static "img/logo.png" %}" alt="KievBallet logo">
+          </a>
+        </div>
+        <div class="col-sm-4 col-xs-12 text-center g-color--white-opacity-light">&copy; {% now "Y" %} KievBallet</div>
+        <div class="col-sm-4 col-xs-12 g-text-center--xs">
+          <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light g-text-right--sm"><a href="/">KievBallet</a> разработано: <a href="https://www.facebook.com/mih.cersac">Mih</a></p>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+    <!-- End Copyright -->
+  </footer>
+  <!--========== END FOOTER ==========-->
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <a href="javascript:void(0);" class="s-back-to-top js__back-to-top"></a>
-
+  <!-- Placed at the end of the document so the pages load faster -->
+  <a href="javascript:void(0);" class="s-back-to-top js__back-to-top"></a>
   <script type="text/javascript" src="{% static 'vendor/jquery.min.js' %} "></script>
   <script type="text/javascript" src="{% static 'vendor/jquery.migrate.min.js' %} "></script>
   <script type="text/javascript" src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %} "></script>
@@ -192,6 +191,7 @@
   <script type="text/javascript" src="{% static 'js/plugins.js' %} "></script>
   <script type="text/javascript" src="{% static 'js/test.js' %}"></script>
   <!--========== END JAVASCRIPTS ==========-->
-    {% render_block "js" %}
-  </body>
+  {% render_block "js" %}
+</body>
+
 </html>

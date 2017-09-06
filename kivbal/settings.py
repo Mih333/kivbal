@@ -220,6 +220,7 @@ DATABASES = {
     'default': {
         'CONN_MAX_AGE': 0,
         'ENGINE': 'django.db.backends.sqlite3',
+        #'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'localhost',
         'NAME': 'project.db',
         'PASSWORD': '',
